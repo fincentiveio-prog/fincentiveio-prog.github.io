@@ -21,7 +21,6 @@
       navToggle.setAttribute('aria-expanded', isOpen);
     });
 
-    // Close on link click
     navMobile.querySelectorAll('a').forEach(function (link) {
       link.addEventListener('click', function () {
         navMobile.classList.remove('open');
@@ -31,7 +30,6 @@
       });
     });
 
-    // Close on escape
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape' && navMobile.classList.contains('open')) {
         navMobile.classList.remove('open');
@@ -55,44 +53,52 @@
         header.classList.remove('scrolled');
       }
     }
-
     updateHeader();
     window.addEventListener('scroll', updateHeader, { passive: true });
   }
 
   /* ============================================================
      INTERSECTION OBSERVER — SCROLL ANIMATIONS
+     Add will-animate first so CSS starts at opacity:1 by default,
+     then JS opts elements into the animation only when ready.
      ============================================================ */
   const animatedEls = document.querySelectorAll('.fade-up, .fade-in');
 
   if (animatedEls.length > 0 && 'IntersectionObserver' in window) {
+
+    // Mark elements for animation BEFORE observer fires
+    animatedEls.forEach(function (el) {
+      el.classList.add('will-animate');
+    });
+
     const observer = new IntersectionObserver(
       function (entries) {
         entries.forEach(function (entry) {
           if (entry.isIntersecting) {
             entry.target.classList.add('visible');
-            observer.unobserve(entry.target); // fire once
+            observer.unobserve(entry.target);
           }
         });
       },
       {
-        threshold: 0.12,
-        rootMargin: '0px 0px -40px 0px'
+        threshold: 0.08,
+        rootMargin: '0px 0px -20px 0px'
       }
     );
 
     animatedEls.forEach(function (el) {
       observer.observe(el);
     });
+
   } else {
-    // Fallback: show all immediately (no IntersectionObserver support)
+    // No IntersectionObserver — elements already visible via CSS default
     animatedEls.forEach(function (el) {
       el.classList.add('visible');
     });
   }
 
   /* ============================================================
-     HERO COUNTER ANIMATION (stat numbers)
+     HERO COUNTER ANIMATION
      ============================================================ */
   function animateCounter(el) {
     const target = parseInt(el.getAttribute('data-target'), 10);
@@ -103,7 +109,6 @@
     function step(now) {
       const elapsed = now - start;
       const progress = Math.min(elapsed / duration, 1);
-      // Ease out
       const eased = 1 - Math.pow(1 - progress, 3);
       el.textContent = Math.floor(eased * target) + suffix;
       if (progress < 1) requestAnimationFrame(step);
@@ -126,14 +131,13 @@
       },
       { threshold: 0.5 }
     );
-
     counterEls.forEach(function (el) {
       counterObserver.observe(el);
     });
   }
 
   /* ============================================================
-     ACTIVE NAV LINK (highlight current page)
+     ACTIVE NAV LINK
      ============================================================ */
   const currentPath = window.location.pathname.replace(/\/$/, '') || '/';
   document.querySelectorAll('.nav-links a, .nav-mobile a').forEach(function (link) {
