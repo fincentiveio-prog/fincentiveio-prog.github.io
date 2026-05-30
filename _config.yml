@@ -1,0 +1,64 @@
+# _config.yml — GitHub Pages Configuration
+# Fincentive IO — https://www.fincentive.io
+# =====================================================
+
+# Site URL — set this to your custom domain with https
+# This is required for correct sitemap and canonical URL generation
+url: "https://www.fincentive.io"
+
+# Base URL — leave blank if the site lives at the root of the domain
+baseurl: ""
+
+# Theme — set to empty string to use your own custom HTML/CSS
+# Do NOT set a Jekyll theme (e.g. minima) or it will override your custom pages
+theme:
+
+# =====================================================
+# CUSTOM DOMAIN SETUP INSTRUCTIONS
+# =====================================================
+#
+# STEP 1 — Add your domain in GitHub Pages settings:
+#   1. Go to your GitHub repository
+#   2. Click "Settings" → "Pages" (left sidebar)
+#   3. Under "Custom domain", type: www.fincentive.io
+#   4. Click "Save"
+#   5. GitHub will create a CNAME file in your repo automatically
+#
+# STEP 2 — Point your domain DNS to GitHub Pages:
+#   In your domain registrar (GoDaddy, Namecheap, Cloudflare, etc.),
+#   add these DNS records:
+#
+#   TYPE    NAME    VALUE
+#   ------  ------  ---------------------------
+#   A       @       185.199.108.153
+#   A       @       185.199.109.153
+#   A       @       185.199.110.153
+#   A       @       185.199.111.153
+#   CNAME   www     YOUR-USERNAME.github.io
+#
+#   Replace YOUR-USERNAME with your actual GitHub username.
+#   DNS propagation can take up to 48 hours (usually much faster).
+#
+# STEP 3 — Enable HTTPS:
+#   After DNS propagates, return to Settings → Pages and check
+#   "Enforce HTTPS". GitHub Pages provides free SSL via Let's Encrypt.
+#   HTTPS is required for SEO and browser trust signals.
+#
+# STEP 4 — Verify:
+#   Visit https://www.fincentive.io and confirm it loads over HTTPS
+#   with no certificate warnings. Check that http:// redirects to https://.
+#
+# =====================================================
+
+# Exclude files that shouldn't be served publicly
+exclude:
+  - README.md
+  - "*.sh"
+  - ".git"
+  - ".gitignore"
+  - "node_modules"
+
+# Tell Jekyll to pass through non-Jekyll files as-is
+# (your HTML files don't use Jekyll front matter, so this is fine)
+# If you want Jekyll to process your HTML with Liquid templates,
+# add --- front matter to each file.

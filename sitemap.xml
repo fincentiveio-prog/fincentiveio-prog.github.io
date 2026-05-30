@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  sitemap.xml — Fincentive IO
+  https://www.fincentive.io/sitemap.xml
+  Last updated: 2025-06-01
+
+  ============================================================
+  HOW TO ADD A NEW BLOG POST:
+  Copy the <url> block below and paste it before the closing
+  </urlset> tag. Update the three fields:
+    <loc>      — Full URL of the new post
+    <lastmod>  — Date you published it (YYYY-MM-DD)
+    <priority> — Use 0.7 for blog posts
+
+  EXAMPLE — copy/paste this block and fill in your values:
+
+  <url>
+    <loc>https://www.fincentive.io/blog/YOUR-POST-SLUG/</loc>
+    <lastmod>YYYY-MM-DD</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  Then also update your blog/index.html card grid and resubmit
+  the sitemap in Google Search Console (see deployment guide).
+  ============================================================
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Homepage -->
+  <url>
+    <loc>https://www.fincentive.io/</loc>
+    <lastmod>2025-06-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Services hub -->
+  <url>
+    <loc>https://www.fincentive.io/services/</loc>
+    <lastmod>2025-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Service sub-pages -->
+  <url>
+    <loc>https://www.fincentive.io/services/local-seo/</loc>
+    <lastmod>2025-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.fincentive.io/services/business-automation/</loc>
+    <lastmod>2025-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.fincentive.io/services/business-consulting/</loc>
+    <lastmod>2025-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.fincentive.io/services/digital-advertising/</loc>
+    <lastmod>2025-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- About -->
+  <url>
+    <loc>https://www.fincentive.io/about/</loc>
+    <lastmod>2025-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Contact -->
+  <url>
+    <loc>https://www.fincentive.io/contact/</loc>
+    <lastmod>2025-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Blog hub -->
+  <url>
+    <loc>https://www.fincentive.io/blog/</loc>
+    <lastmod>2025-06-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blog posts -->
+  <url>
+    <loc>https://www.fincentive.io/blog/what-is-ai-business-automation/</loc>
+    <lastmod>2025-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.fincentive.io/blog/local-seo-guide-for-contractors/</loc>
+    <lastmod>2025-06-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!--
+  ============================================================
+  ADD NEW BLOG POSTS ABOVE THIS LINE
+  Use the template in the header comment above.
+  ============================================================
+  -->
+
+</urlset>
