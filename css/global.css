@@ -518,10 +518,15 @@ p {
    SCROLL ANIMATIONS
    ============================================================ */
 .fade-up {
-  opacity: 0;
-  transform: translateY(32px);
+  opacity: 1;
+  transform: translateY(0);
   transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
               transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.fade-up.will-animate {
+  opacity: 0;
+  transform: translateY(32px);
 }
 
 .fade-up.visible {
@@ -530,10 +535,11 @@ p {
 }
 
 .fade-in {
-  opacity: 0;
+  opacity: 1;
   transition: opacity 0.7s ease;
 }
 
+.fade-in.will-animate { opacity: 0; }
 .fade-in.visible { opacity: 1; }
 
 /* Staggered delays */
