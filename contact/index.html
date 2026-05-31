@@ -367,17 +367,17 @@
       text-decoration: underline;
     }
 
-     (max-width: 960px) {
+    @media (max-width: 960px) {
       .contact-grid { grid-template-columns: 1fr; }
     }
-     (max-width: 768px) {
+    @media (max-width: 768px) {
       .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
       .form-row { grid-template-columns: 1fr; }
       .social-contact-grid { grid-template-columns: repeat(2, 1fr); }
       .contact-form-wrap,
       .contact-sidebar { width: 100%; min-width: 0; }
     }
-     (max-width: 480px) {
+    @media (max-width: 480px) {
       .form-row { grid-template-columns: 1fr; }
       .social-contact-grid { grid-template-columns: 1fr 1fr; }
     }
