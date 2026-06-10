@@ -118,11 +118,29 @@
     <priority>0.7</priority>
   </url>
 
-  <!--
-  ============================================================
-  ADD NEW BLOG POSTS ABOVE THIS LINE
-  Use the template in the header comment above.
-  ============================================================
-  -->
+  <!-- Trade-Specific Service Pages -->
+  <url><loc>https://www.fincentive.io/services/local-seo-for-electricians-toronto/</loc><lastmod>2026-06-10</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.fincentive.io/services/local-seo-for-plumbers-toronto/</loc><lastmod>2026-06-10</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.fincentive.io/services/local-seo-for-hvac-contractors-toronto/</loc><lastmod>2026-06-10</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.fincentive.io/services/local-seo-for-roofers-toronto/</loc><lastmod>2026-06-10</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.fincentive.io/services/lead-generation-for-contractors-toronto/</loc><lastmod>2026-06-10</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.fincentive.io/services/ai-automation-for-trades-businesses/</loc><lastmod>2026-06-10</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <!-- GTA Location Pages -->
+  <url><loc>https://www.fincentive.io/local-seo-mississauga/</loc><lastmod>2026-06-10</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.fincentive.io/local-seo-brampton/</loc><lastmod>2026-06-10</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.fincentive.io/local-seo-scarborough/</loc><lastmod>2026-06-10</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.fincentive.io/local-seo-etobicoke/</loc><lastmod>2026-06-10</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.fincentive.io/seo-agency-north-york/</loc><lastmod>2026-06-10</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <!-- New Blog Posts June 2026 -->
+  <url><loc>https://www.fincentive.io/blog/how-contractors-rank-1-google-maps-toronto-2026/</loc><lastmod>2026-06-10</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.fincentive.io/blog/what-is-aeo-toronto-contractors/</loc><lastmod>2026-06-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.fincentive.io/blog/best-ai-tools-contractors-ontario-2026/</loc><lastmod>2026-06-08</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.fincentive.io/blog/how-much-does-seo-cost-toronto/</loc><lastmod>2026-06-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.fincentive.io/blog/google-business-profile-checklist-trades-contractors/</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.fincentive.io/blog/how-to-get-more-leads-electrician-toronto/</loc><lastmod>2026-06-05</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.fincentive.io/blog/lead-generation-hvac-contractors-ontario/</loc><lastmod>2026-06-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.fincentive.io/blog/ai-automation-workflow-for-roofing-companies/</loc><lastmod>2026-06-03</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.fincentive.io/blog/digital-marketing-for-plumbers-toronto/</loc><lastmod>2026-06-02</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.fincentive.io/blog/google-maps-ranking-trades-businesses/</loc><lastmod>2026-06-01</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
 </urlset>
