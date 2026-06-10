@@ -1,0 +1,22 @@
+# robots.txt — Fincentive IO
+# https://www.fincentive.io/robots.txt
+# Last updated: 2025-06-01
+
+User-agent: *
+Allow: /
+
+# -------------------------------------------------------
+# FUTURE DISALLOW RULES
+# If you add pages that should NOT be indexed by Google,
+# add them here. Examples:
+#
+# Disallow: /admin/
+# Disallow: /thank-you/
+# Disallow: /private/
+# Disallow: /staging/
+#
+# Uncomment and adjust as needed when those pages exist.
+# -------------------------------------------------------
+
+# Sitemap location — update if you move your sitemap
+Sitemap: https://www.fincentive.io/sitemap.xml

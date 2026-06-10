@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<!--
+  ============================================================
+  FINCENTIVE IO — BLOG POST TEMPLATE
+  ============================================================
+  HOW TO USE THIS TEMPLATE:
+  1. Copy this file to: blog/YOUR-POST-SLUG/index.html
+     Example: blog/how-to-get-more-google-reviews/index.html
+  2. Replace EVERY value marked with [REPLACE: ...] below
+  3. Update the Article JSON-LD in the <head>
+  4. Write your article content in the <article> section
+  5. Copy the POST CARD at the bottom of this file into blog/index.html
+  6. Update the "N articles published" count on blog/index.html
+  ============================================================
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--
+    ┌─────────────────────────────────────────────────────────┐
+    │  SEO: TITLE TAG                                         │
+    │  50-60 characters ideal                                 │
+    │  Format: "Primary Keyword: Secondary Keyword | Fincentive IO"
+    │  Example: "How to Get Google Reviews Fast | Fincentive IO"
+    └─────────────────────────────────────────────────────────┘
+  -->
+  <title>[REPLACE: Article Title — Include Primary Keyword | Fincentive IO]</title>
+
+  <!--
+    ┌─────────────────────────────────────────────────────────┐
+    │  SEO: META DESCRIPTION                                  │
+    │  140-155 characters ideal                               │
+    │  Should include primary keyword and a clear value prop  │
+    │  Example: "Learn how to get more Google reviews for your
+    │  trades business. Step-by-step guide with proven request
+    │  templates and automation tips."                        │
+    └─────────────────────────────────────────────────────────┘
+  -->
+  <meta name="description" content="[REPLACE: 140-155 char meta description with primary keyword and value proposition for the article]">
+
+  <meta name="robots" content="index, follow">
+
+  <!--
+    ┌─────────────────────────────────────────────────────────┐
+    │  CANONICAL URL                                          │
+    │  Replace YOUR-POST-SLUG with the actual URL slug        │
+    │  Must match the directory name you created              │
+    └─────────────────────────────────────────────────────────┘
+  -->
+  <link rel="canonical" href="https://www.fincentive.io/blog/[REPLACE-POST-SLUG]/">
+
+  <!-- ─── OPEN GRAPH (Social sharing) ─── -->
+  <meta property="og:type"        content="article">
+  <meta property="og:url"         content="https://www.fincentive.io/blog/[REPLACE-POST-SLUG]/">
+  <!-- [REPLACE: OG title — can match the <title> tag] -->
+  <meta property="og:title"       content="[REPLACE: OG Title | Fincentive IO]">
+  <!-- [REPLACE: OG description — 1-2 compelling sentences] -->
+  <meta property="og:description" content="[REPLACE: OG description for social sharing]">
+  <!-- [REPLACE: if you have a custom post image, change the path below]
+       Recommended size: 1200x630px. Save to /images/blog/YOUR-POST-SLUG-og.jpg -->
+  <meta property="og:image"       content="https://www.fincentive.io/images/og-image.jpg">
+  <meta property="og:site_name"   content="Fincentive IO">
+  <!-- [REPLACE: Use the actual ISO 8601 publish date] -->
+  <meta property="article:published_time" content="[REPLACE: YYYY-MM-DDTHH:MM:SS-04:00]">
+  <meta property="article:author"         content="Fincentive IO">
+  <!-- [REPLACE: Article category — e.g. "Local SEO" / "AI Automation" / "Business Consulting"] -->
+  <meta property="article:section"        content="[REPLACE: Category Name]">
+
+  <!-- ─── TWITTER CARD ─── -->
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:site"        content="@Fincentive_io">
+  <meta name="twitter:title"       content="[REPLACE: Twitter title]">
+  <meta name="twitter:description" content="[REPLACE: Twitter description — 1 punchy sentence]">
+  <meta name="twitter:image"       content="https://www.fincentive.io/images/og-image.jpg">
+
+  <!--
+    ┌─────────────────────────────────────────────────────────┐
+    │  SCHEMA: BREADCRUMBLIST                                 │
+    │  Update position 3 with actual post title and URL       │
+    └─────────────────────────────────────────────────────────┘
+  -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.fincentive.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.fincentive.io/blog/" },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "[REPLACE: Article title as it appears in breadcrumb nav]",
+        "item": "https://www.fincentive.io/blog/[REPLACE-POST-SLUG]/"
+      }
+    ]
+  }
+  </script>
+
+  <!--
+    ┌─────────────────────────────────────────────────────────┐
+    │  SCHEMA: ARTICLE                                        │
+    │  Update ALL fields below — this drives rich results     │
+    │  and Google's understanding of your content             │
+    └─────────────────────────────────────────────────────────┘
+  -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+
+    /* [REPLACE: Full article title — matches your H1] */
+    "headline": "[REPLACE: Full Article Title]",
+
+    /* [REPLACE: 1-2 sentence description of the article] */
+    "description": "[REPLACE: Article description — 1-2 sentences summarizing what the reader will learn]",
+
+    /* [REPLACE: ISO 8601 date when first published — YYYY-MM-DDTHH:MM:SS-04:00] */
+    "datePublished": "[REPLACE: YYYY-MM-DDTHH:MM:SS-04:00]",
+
+    /* [REPLACE: ISO 8601 date of last update — update this whenever you revise the article] */
+    "dateModified": "[REPLACE: YYYY-MM-DDTHH:MM:SS-04:00]",
+
+    "author": {
+      "@type": "Organization",
+      "name": "Fincentive IO",
+      "url": "https://www.fincentive.io"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Fincentive IO",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.fincentive.io/images/logo-main.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.fincentive.io/blog/[REPLACE-POST-SLUG]/"
+    },
+
+    /* [REPLACE: 4-8 keywords/phrases relevant to the article — use actual search terms] */
+    "keywords": ["[REPLACE: keyword 1]", "[REPLACE: keyword 2]", "[REPLACE: keyword 3]"],
+
+    /* [REPLACE: Category — same as article:section above] */
+    "articleSection": "[REPLACE: Category Name]",
+
+    /* [REPLACE: Approximate word count of the finished article] */
+    "wordCount": 2000
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!--
+    ┌─────────────────────────────────────────────────────────┐
+    │  CSS PATH                                               │
+    │  This template assumes: blog/YOUR-POST-SLUG/index.html  │
+    │  If your file is at a different depth, adjust ../.. below
+    └─────────────────────────────────────────────────────────┘
+  -->
+  <link rel="stylesheet" href="../../css/global.css">
+  <link rel="icon" type="image/png" href="../../images/logo-icon.png">
+
+  <style>
+    /* ─── Page hero ─── */
+    .page-hero {
+      position: relative; padding-top: 9rem; padding-bottom: 4rem;
+      overflow: hidden; background: var(--black);
+    }
+    .page-hero::before {
+      content: ''; position: absolute; inset: 0;
+      background-image:
+        linear-gradient(rgba(201,168,76,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(201,168,76,0.04) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+
+    /* ─── Breadcrumb ─── */
+    .breadcrumb {
+      display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;
+      font-size: 0.78rem; color: var(--white-dim); margin-bottom: 1.5rem;
+      position: relative; z-index: 2;
+    }
+    .breadcrumb a { color: var(--white-dim); transition: color var(--transition-fast); }
+    .breadcrumb a:hover { color: var(--gold); }
+    .breadcrumb .current { color: var(--gold); }
+    .breadcrumb-sep { color: var(--black-border); }
+
+    /* ─── Article hero ─── */
+    .article-hero { position: relative; z-index: 2; max-width: 820px; }
+    .article-meta {
+      display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;
+      margin-bottom: 1.25rem;
+    }
+    .article-cat {
+      display: inline-flex;
+      background: var(--gold-glow); border: 1px solid rgba(201,168,76,0.25);
+      color: var(--gold-light); font-size: 0.65rem; font-weight: 600;
+      letter-spacing: 0.15em; text-transform: uppercase;
+      padding: 0.25rem 0.7rem; border-radius: 100px;
+    }
+    .article-date, .article-read { font-size: 0.78rem; color: var(--white-dim); }
+    .article-hero h1 { margin-bottom: 1.25rem; font-size: clamp(1.8rem, 3.5vw, 2.6rem); }
+    .article-intro { font-size: 1.1rem; color: var(--white-muted); line-height: 1.8; }
+
+    /* ─── Article layout ─── */
+    .article-layout {
+      display: grid; grid-template-columns: 1fr 260px;
+      gap: 3.5rem; align-items: flex-start;
+    }
+
+    /* ─── Article body typography ─── */
+    .article-body h2 {
+      font-size: clamp(1.3rem, 2.5vw, 1.7rem);
+      margin-top: 3rem; margin-bottom: 1rem;
+      padding-top: 3rem; border-top: 1px solid var(--black-border); color: var(--white);
+    }
+    .article-body h2:first-child { margin-top:0; padding-top:0; border-top:none; }
+    .article-body h3 { font-size: 1.15rem; margin: 2rem 0 0.75rem; color: var(--white); }
+    .article-body p  { margin-bottom: 1.2rem; font-size: 1rem; line-height: 1.85; }
+    .article-body strong { color: var(--white); }
+    .article-body a { color: var(--gold); text-decoration: underline; text-underline-offset: 3px; }
+    .article-body a:hover { color: var(--gold-light); }
+    .article-body ul, .article-body ol {
+      margin: 1rem 0 1.2rem 1.25rem; display: flex; flex-direction: column; gap: 0.5rem;
+    }
+    .article-body li { font-size: 0.97rem; color: var(--white-muted); line-height: 1.7; }
+    .article-body ul li::marker { color: var(--gold); }
+    .article-body ol li::marker { color: var(--gold); font-family: var(--font-display); font-weight: 700; }
+
+    /* ─── Callout / highlight box ─── */
+    .callout {
+      background: rgba(201,168,76,0.06);
+      border: 1px solid rgba(201,168,76,0.2);
+      border-left: 3px solid var(--gold);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      padding: 1.25rem 1.5rem; margin: 1.75rem 0;
+    }
+    .callout p { margin: 0; font-size: 0.95rem; }
+    .callout strong { color: var(--gold-light); }
+
+    /* ─── Inline CTA ─── */
+    .inline-cta {
+      background: linear-gradient(135deg, rgba(201,168,76,0.1), rgba(201,168,76,0.03));
+      border: 1px solid rgba(201,168,76,0.25); border-radius: var(--radius-md);
+      padding: 2rem; margin: 2.5rem 0; text-align: center;
+    }
+    .inline-cta h3 { font-size: 1.2rem; margin-bottom: 0.6rem; }
+    .inline-cta p  { font-size: 0.9rem; margin-bottom: 1.25rem; }
+
+    /* ─── Article tags ─── */
+    .article-tags {
+      display: flex; flex-wrap: wrap; gap: 0.5rem;
+      padding-top: 2rem; margin-top: 2rem; border-top: 1px solid var(--black-border);
+    }
+    .article-tag {
+      font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--white-dim);
+      background: var(--black-card); border: 1px solid var(--black-border);
+      padding: 0.3rem 0.75rem; border-radius: 100px;
+    }
+
+    /* ─── Sidebar ─── */
+    .article-sidebar { position: sticky; top: 7rem; }
+    .toc-card {
+      background: var(--black-card); border: 1px solid var(--black-border);
+      border-radius: var(--radius-md); padding: 1.5rem; margin-bottom: 1.5rem;
+    }
+    .toc-card h3 {
+      font-size: 0.72rem; font-weight: 600; letter-spacing: 0.18em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 1rem;
+    }
+    .toc-list { display: flex; flex-direction: column; gap: 0.1rem; list-style: none; }
+    .toc-list a {
+      display: flex; align-items: flex-start; gap: 0.6rem;
+      font-size: 0.8rem; color: var(--white-muted); padding: 0.35rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+      transition: color var(--transition-fast); line-height: 1.4;
+    }
+    .toc-list a:hover { color: var(--gold); }
+    .toc-num {
+      font-family: var(--font-display); font-size: 0.65rem;
+      color: var(--gold); font-weight: 700; flex-shrink: 0; margin-top: 0.1rem;
+    }
+    .sidebar-cta-box {
+      background: linear-gradient(135deg, rgba(201,168,76,0.1), rgba(201,168,76,0.03));
+      border: 1px solid rgba(201,168,76,0.25); border-radius: var(--radius-md);
+      padding: 1.5rem; text-align: center;
+    }
+    .sidebar-cta-box h3 { font-size: 0.95rem; margin-bottom: 0.6rem; }
+    .sidebar-cta-box p  { font-size: 0.82rem; margin-bottom: 1rem; }
+
+    @media (max-width: 960px) {
+      .article-layout  { grid-template-columns: 1fr; }
+      .article-sidebar { position: static; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ─── HEADER (do not change) ─── -->
+<header id="site-header" role="banner">
+  <div class="container">
+    <nav class="nav-inner" role="navigation" aria-label="Main navigation">
+      <a href="/" class="nav-logo" aria-label="Fincentive IO — Home">
+        <img src="../../images/logo-main.png" alt="Fincentive IO" height="40" width="auto">
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="/">Home</a></li>
+        <li><a href="/services/">Services</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/blog/" class="active">Blog</a></li>
+        <li><a href="/contact/">Contact</a></li>
+      </ul>
+      <a href="/contact/" class="btn btn-primary nav-cta">Free Consultation</a>
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </div>
+</header>
+<nav class="nav-mobile" id="nav-mobile" aria-label="Mobile navigation">
+  <a href="/">Home</a><a href="/services/">Services</a><a href="/about/">About</a>
+  <a href="/blog/">Blog</a><a href="/contact/">Contact</a>
+  <a href="/contact/" class="btn btn-primary" style="margin-top:1rem;">Free Consultation</a>
+</nav>
+
+<main id="main-content">
+
+  <!--
+    ┌─────────────────────────────────────────────────────────┐
+    │  ARTICLE HERO                                           │
+    │  Update: breadcrumb text, category, date, read time, H1,│
+    │  and the intro paragraph below                          │
+    └─────────────────────────────────────────────────────────┘
+  -->
+  <section class="page-hero" aria-label="Article hero">
+    <div class="container">
+
+      <!-- Breadcrumb — update the last <span class="current"> text -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a><span class="breadcrumb-sep">›</span>
+        <a href="/blog/">Blog</a><span class="breadcrumb-sep">›</span>
+        <span class="current">[REPLACE: Short breadcrumb label — e.g. "Google Reviews Guide"]</span>
+      </nav>
+
+      <div class="article-hero fade-up">
+        <div class="article-meta">
+          <!-- [REPLACE: Category — e.g. "Local SEO" / "AI Automation" / "Business Consulting" / "Digital Advertising"] -->
+          <span class="article-cat">[REPLACE: Category]</span>
+          <!-- [REPLACE: Publish date — display format e.g. "June 15, 2025"] -->
+          <span class="article-date">[REPLACE: Month Day, Year]</span>
+          <!-- [REPLACE: Estimated read time — divide word count by 200] -->
+          <span class="article-read">⏱ [REPLACE: X] min read</span>
+        </div>
+
+        <!--
+          H1: Full article title — should include your primary keyword
+          Keep it natural, clear, and specific
+          Example: "How to Get More Google Reviews: A Step-by-Step Guide for Contractors"
+        -->
+        <h1>[REPLACE: Full Article Title With Primary Keyword]</h1>
+
+        <!--
+          INTRO PARAGRAPH: 2-4 sentences summarizing the article.
+          This appears large and prominent. Include your primary keyword naturally.
+          Make the reader immediately feel they're in the right place.
+        -->
+        <p class="article-intro">[REPLACE: 2-4 sentence intro paragraph. Describe the problem your article solves, who it's for, and what they'll learn or be able to do after reading it. Include your primary keyword naturally in the first or second sentence.]</p>
+      </div>
+    </div>
+  </section>
+
+  <!--
+    ┌─────────────────────────────────────────────────────────┐
+    │  ARTICLE CONTENT                                        │
+    └─────────────────────────────────────────────────────────┘
+  -->
+  <section class="section-pad" aria-label="Article content">
+    <div class="container">
+      <div class="article-layout">
+
+        <!--
+          ════════════════════════════════════════════════════
+          ARTICLE BODY
+          Write all article content inside this <article> tag.
+
+          Structure guidelines:
+          — Aim for 1,800–2,500 words
+          — Use H2 for major sections (these feed the TOC sidebar)
+          — Use H3 for sub-sections within each H2
+          — Add id="" attributes to each H2 (e.g. id="why-it-matters")
+            so the TOC sidebar links can anchor to them
+          — Use <p> tags for all body text
+          — Use <ul> or <ol> for lists
+          — Use <strong> for important phrases (turns gold-white)
+          — Use <a href="..."> for internal links (turns gold)
+
+          Callout box example:
+          <div class="callout">
+            <p><strong>Key insight:</strong> Your callout text here.</p>
+          </div>
+
+          Inline CTA example (place after a key section, not at the very start):
+          <div class="inline-cta">
+            <h3>Ready to [action]?</h3>
+            <p>Short description of the offer.</p>
+            <a href="/contact/" class="btn btn-primary">CTA Button Text</a>
+          </div>
+          ════════════════════════════════════════════════════
+        -->
+        <article class="article-body fade-up">
+
+          <!--
+            SECTION 1 — MAIN TOPIC INTRODUCTION
+            Add id attribute matching your TOC entry below
+          -->
+          <h2 id="[REPLACE-section-1-id]">[REPLACE: Section 1 Heading]</h2>
+          <p>[REPLACE: Section 1 body text. Write in a clear, direct style — like you're explaining something to a smart client, not performing for a search engine. Avoid vague filler sentences. Every paragraph should add something the reader can use or understand.]</p>
+          <p>[REPLACE: Continue section 1 body text. Aim for 3-5 paragraphs per major section.]</p>
+
+
+          <!-- SECTION 2 -->
+          <h2 id="[REPLACE-section-2-id]">[REPLACE: Section 2 Heading]</h2>
+          <p>[REPLACE: Section 2 body text.]</p>
+
+          <!-- Optional: subsection inside Section 2 -->
+          <h3>[REPLACE: Optional Subsection Heading]</h3>
+          <p>[REPLACE: Subsection body text.]</p>
+
+          <!-- Optional callout box -->
+          <div class="callout">
+            <p><strong>[REPLACE: Callout label e.g. "Pro tip:" or "Key insight:"]</strong> [REPLACE: The callout text — a single important point, tip, or stat. Keep it to 1-3 sentences.]</p>
+          </div>
+
+
+          <!-- SECTION 3 -->
+          <h2 id="[REPLACE-section-3-id]">[REPLACE: Section 3 Heading]</h2>
+          <p>[REPLACE: Section 3 body text.]</p>
+          <ul>
+            <li>[REPLACE: List item 1]</li>
+            <li>[REPLACE: List item 2]</li>
+            <li>[REPLACE: List item 3]</li>
+          </ul>
+
+
+          <!-- SECTION 4 -->
+          <h2 id="[REPLACE-section-4-id]">[REPLACE: Section 4 Heading]</h2>
+          <p>[REPLACE: Section 4 body text.]</p>
+
+
+          <!-- SECTION 5 -->
+          <h2 id="[REPLACE-section-5-id]">[REPLACE: Section 5 Heading]</h2>
+          <p>[REPLACE: Section 5 body text.]</p>
+
+
+          <!--
+            INLINE CTA — place near the end of the article, before the closing section
+            Links to the most relevant service page for this article's topic
+          -->
+          <div class="inline-cta">
+            <!--
+              [REPLACE: CTA headline — action-oriented, specific to what the article is about]
+              Examples:
+              "Ready to Automate Your Business?"
+              "Want a Free Local SEO Audit?"
+              "Book Your Free Strategy Call"
+            -->
+            <h3>[REPLACE: CTA Headline]</h3>
+            <!--
+              [REPLACE: 1-2 sentences describing the offer — what will they get when they click?]
+            -->
+            <p>[REPLACE: CTA description — what do they get? E.g. "Book a free 30-minute audit and we'll show you exactly where your business stands and what we'd do to improve it."]</p>
+            <!--
+              [REPLACE: href to the most relevant service page]
+              Options: /services/local-seo/ | /services/business-automation/
+                       /services/business-consulting/ | /services/digital-advertising/ | /contact/
+            -->
+            <a href="[REPLACE: /services/RELEVANT-PAGE/ or /contact/]" class="btn btn-primary">[REPLACE: Button Text]</a>
+          </div>
+
+          <!--
+            CLOSING PARAGRAPH
+            1-3 sentences. Can mention related articles or link to contact.
+            Include 1-2 internal links naturally.
+          -->
+          <p>[REPLACE: Closing paragraph. Can include an internal link to a related service page or the contact page. E.g. "If you want to go deeper on [topic], check out our guide on <a href="/blog/related-post/">related topic</a>, or <a href="/contact/">reach out</a> and we'll walk through your specific situation together."]</p>
+
+          <!--
+            ARTICLE TAGS — add 4-8 tags relevant to this article
+            Used for categorization and internal linking signal
+          -->
+          <div class="article-tags" aria-label="Article tags">
+            <!-- [REPLACE: Update tags to match this article's topics] -->
+            <span class="article-tag">[REPLACE: Tag 1]</span>
+            <span class="article-tag">[REPLACE: Tag 2]</span>
+            <span class="article-tag">[REPLACE: Tag 3]</span>
+            <span class="article-tag">[REPLACE: Tag 4]</span>
+            <span class="article-tag">Toronto</span>
+          </div>
+
+        </article>
+        <!-- END ARTICLE BODY -->
+
+        <!--
+          ════════════════════════════════════════════════════
+          SIDEBAR — TABLE OF CONTENTS + CTA
+          Update TOC entries to match your H2 sections above.
+          Each <a> href should match an id="" on an H2 in the article body.
+          ════════════════════════════════════════════════════
+        -->
+        <aside class="article-sidebar fade-in delay-3" aria-label="Article sidebar">
+
+          <div class="toc-card">
+            <h3>In This Article</h3>
+            <!--
+              TOC ENTRIES — add one <li> per H2 section in the article
+              href="#id-value" must match the id="" on the corresponding H2
+            -->
+            <ol class="toc-list" aria-label="Table of contents">
+              <li><a href="#[REPLACE-section-1-id]"><span class="toc-num">01</span>[REPLACE: Short TOC label for section 1]</a></li>
+              <li><a href="#[REPLACE-section-2-id]"><span class="toc-num">02</span>[REPLACE: Short TOC label for section 2]</a></li>
+              <li><a href="#[REPLACE-section-3-id]"><span class="toc-num">03</span>[REPLACE: Short TOC label for section 3]</a></li>
+              <li><a href="#[REPLACE-section-4-id]"><span class="toc-num">04</span>[REPLACE: Short TOC label for section 4]</a></li>
+              <li><a href="#[REPLACE-section-5-id]"><span class="toc-num">05</span>[REPLACE: Short TOC label for section 5]</a></li>
+              <!-- Add more <li> items here for additional sections -->
+            </ol>
+          </div>
+
+          <!--
+            SIDEBAR CTA BOX
+            Links to the most relevant service for this article
+          -->
+          <div class="sidebar-cta-box">
+            <!-- [REPLACE: Short sidebar CTA headline] -->
+            <h3>[REPLACE: Sidebar CTA Headline]</h3>
+            <!-- [REPLACE: 1-2 sentences, very brief] -->
+            <p>[REPLACE: Brief CTA description — 1-2 sentences max.]</p>
+            <!--
+              [REPLACE: href to relevant service or contact page]
+            -->
+            <a href="[REPLACE: /services/PAGE/ or /contact/]" class="btn btn-primary" style="width:100%; justify-content:center; font-size:0.85rem;">[REPLACE: CTA Button Text]</a>
+          </div>
+
+          <!--
+            RELATED ARTICLES
+            Link to 1-3 other blog posts or service pages
+            Add/remove <li> items as needed
+          -->
+          <div class="toc-card" style="margin-top:1.5rem;">
+            <h3>Related Articles</h3>
+            <ul style="list-style:none; display:flex; flex-direction:column; gap:0.75rem;">
+              <!-- [REPLACE: Update href and link text for each related article] -->
+              <li>
+                <a href="/blog/[REPLACE-related-slug]/"
+                   style="font-size:0.85rem; color:var(--white-muted); line-height:1.4; display:block; transition:color var(--transition-fast);"
+                   onmouseover="this.style.color='var(--gold)'"
+                   onmouseout="this.style.color='var(--white-muted)'">
+                  [REPLACE: Related article title] →
+                </a>
+              </li>
+              <!-- Copy the <li> above for additional related articles -->
+            </ul>
+          </div>
+
+        </aside>
+        <!-- END SIDEBAR -->
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ─── FOOTER (do not change) ─── -->
+<footer id="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="nav-logo"><img src="../../images/logo-main.png" alt="Fincentive IO" height="36" width="auto"></a>
+        <p>Toronto's AI automation and digital growth agency — built for contractors, trades businesses, and ambitious companies ready to scale.</p>
+        <div class="social-row" aria-label="Social media links">
+          <a href="https://www.instagram.com/fincentive_io"        class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+          <a href="https://www.linkedin.com/company/fincentive-io" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+          <a href="https://twitter.com/Fincentive_io"              class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.741l7.73-8.835L1.254 2.25H8.08l4.261 5.635zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+          <a href="https://www.tiktok.com/@fincentive_io"          class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.27 8.27 0 004.84 1.55V6.81a4.85 4.85 0 01-1.07-.12z"/></svg></a>
+          <a href="https://www.facebook.com/fincentive.io"         class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+          <a href="https://www.youtube.com/@fincentive_io"         class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col"><h4>Services</h4><ul role="list"><li><a href="/services/local-seo/">Local SEO &amp; AEO</a></li><li><a href="/services/business-automation/">Workflow Automation</a></li><li><a href="/services/business-consulting/">Business Consulting</a></li><li><a href="/services/digital-advertising/">Digital Advertising</a></li></ul></div>
+      <div class="footer-col"><h4>Company</h4><ul role="list"><li><a href="/">Home</a></li><li><a href="/about/">About Us</a></li><li><a href="/blog/">Blog</a></li><li><a href="/contact/">Contact</a></li></ul></div>
+      <div class="footer-col footer-contact">
+        <h4>Contact Us</h4>
+        <p><span class="icon" aria-hidden="true">📍</span><span>33 Bloor St E #637<br>Toronto, ON M4W 3H1</span></p>
+        <p><span class="icon" aria-hidden="true">📞</span><a href="tel:+14376022693" style="color:var(--white-muted)">437-602-2693</a></p>
+        <p><span class="icon" aria-hidden="true">✉️</span><a href="mailto:info@fincentive.io" style="color:var(--white-muted)">info@fincentive.io</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© <span id="year"></span> Fincentive IO. All rights reserved. Toronto, ON.</p>
+      <p><a href="/privacy/" style="color:var(--white-dim);margin-right:1.5rem;">Privacy Policy</a><a href="/terms/" style="color:var(--white-dim);">Terms of Service</a></p>
+    </div>
+  </div>
+</footer>
+
+<!--
+  ┌─────────────────────────────────────────────────────────────────────────┐
+  │  JS PATH — same depth adjustment as CSS above                           │
+  └─────────────────────────────────────────────────────────────────────────┘
+-->
+<script src="../../js/main.js" defer></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+</body>
+</html>
+
+
+<!--
+  ════════════════════════════════════════════════════════════════════════════
+  POST CARD — COPY THIS INTO blog/index.html TO ADD THIS POST TO THE BLOG HUB
+  ════════════════════════════════════════════════════════════════════════════
+
+  Instructions:
+  1. Find the comment <!-- ADD NEW BLOG POST CARD HERE --> in blog/index.html
+  2. Paste the card below immediately above that comment
+  3. Update delay class: use delay-3, delay-4, delay-5 etc.
+     (delay-1 and delay-2 are used by the first two posts)
+  4. Update the "N articles published" text at the top of the post grid
+  ════════════════════════════════════════════════════════════════════════════
+
+  <article class="post-card fade-up delay-[REPLACE: 3]">
+    <a href="/blog/[REPLACE-POST-SLUG]/" aria-label="Read: [REPLACE: Full Article Title]">
+      <div class="post-thumb" aria-hidden="true">
+        <!-- REPLACE this with: <img src="/images/blog/[REPLACE-POST-SLUG]-featured.jpg" alt="[REPLACE: descriptive alt text for featured image]" width="800" height="450" loading="lazy"> -->
+        <div class="post-thumb-inner">
+          <span class="post-thumb-icon">[REPLACE: EMOJI representing the topic]</span>
+          <span class="post-thumb-label">[REPLACE: Category Name]</span>
+        </div>
+      </div>
+    </a>
+    <div class="post-body">
+      <div class="post-meta">
+        <span class="post-cat">[REPLACE: Category]</span>
+        <span class="post-read-time">⏱ [REPLACE: X] min read</span>
+        <span class="post-date">[REPLACE: Month Day, Year]</span>
+      </div>
+      <h2><a href="/blog/[REPLACE-POST-SLUG]/">[REPLACE: Article Title]</a></h2>
+      <p class="post-excerpt">[REPLACE: 2-3 sentence excerpt. Summarize what the article covers and why the reader should click. Include the primary keyword naturally.]</p>
+      <a href="/blog/[REPLACE-POST-SLUG]/" class="post-read-more" aria-label="Read full article on [REPLACE: topic]">Read Article</a>
+    </div>
+  </article>
+
+  ════════════════════════════════════════════════════════════════════════════
+  END POST CARD TEMPLATE
+  ════════════════════════════════════════════════════════════════════════════
+-->

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Not Found | Fincentive IO</title>
+  <meta name="description" content="The page you're looking for doesn't exist. Head back to Fincentive IO's homepage or contact us directly.">
+  <meta name="robots" content="noindex, follow">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="/css/global.css">
+  <link rel="icon" type="image/png" href="/images/logo-icon.png">
+
+  <style>
+    html, body {
+      height: 100%;
+    }
+    .error-page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 3rem 1.5rem;
+      position: relative;
+      overflow: hidden;
+      background: var(--black);
+    }
+    /* Background grid */
+    .error-page::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(201,168,76,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(201,168,76,0.04) 1px, transparent 1px);
+      background-size: 60px 60px;
+      pointer-events: none;
+    }
+    /* Radial glow */
+    .error-page::after {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 70vw; height: 70vw;
+      background: radial-gradient(circle, rgba(201,168,76,0.06) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .error-inner {
+      position: relative;
+      z-index: 2;
+      max-width: 560px;
+    }
+    .error-code {
+      font-family: var(--font-display);
+      font-size: clamp(6rem, 18vw, 10rem);
+      font-weight: 800;
+      line-height: 1;
+      letter-spacing: -0.04em;
+      /* Gold gradient text */
+      background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 50%, var(--gold-dark) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 0.25rem;
+      user-select: none;
+    }
+    .error-divider {
+      width: 60px; height: 2px;
+      background: linear-gradient(to right, var(--gold), transparent);
+      margin: 1.5rem auto;
+    }
+    .error-headline {
+      font-family: var(--font-display);
+      font-size: clamp(1.3rem, 4vw, 2rem);
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 1rem;
+      line-height: 1.3;
+    }
+    .error-subtext {
+      font-size: 1rem;
+      color: var(--white-muted);
+      line-height: 1.75;
+      margin-bottom: 2.5rem;
+    }
+    .error-actions {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 3rem;
+    }
+    .error-links {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      font-size: 0.85rem;
+    }
+    .error-links a {
+      color: var(--white-dim);
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+      transition: color var(--transition-fast);
+    }
+    .error-links a::before {
+      content: '→';
+      color: var(--gold);
+      font-size: 0.75rem;
+    }
+    .error-links a:hover {
+      color: var(--gold);
+    }
+    /* Minimal nav bar */
+    .error-nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      padding: 1.25rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 100;
+      background: linear-gradient(to bottom, rgba(10,10,10,0.95), transparent);
+    }
+    .error-nav img { height: 36px; width: auto; }
+  </style>
+</head>
+<body>
+
+  <!-- Minimal nav -->
+  <nav class="error-nav" aria-label="Site navigation">
+    <a href="/" aria-label="Fincentive IO — Go to homepage">
+      <img src="/images/logo-main.png" alt="Fincentive IO" height="36" width="auto">
+    </a>
+    <a href="/contact/" class="btn btn-primary" style="padding:0.5rem 1.25rem; font-size:0.82rem;">Contact Us</a>
+  </nav>
+
+  <!-- 404 Content -->
+  <main class="error-page" id="main-content" aria-label="Page not found">
+    <div class="error-inner">
+
+      <div class="error-code" aria-hidden="true">404</div>
+
+      <div class="error-divider" aria-hidden="true"></div>
+
+      <h1 class="error-headline">Looks like this page went offline.</h1>
+
+      <p class="error-subtext">
+        Let's get you back on track. The page you're looking for may have moved,
+        been renamed, or never existed in the first place. Try heading back to the
+        homepage or reaching out to us directly.
+      </p>
+
+      <div class="error-actions">
+        <a href="/"        class="btn btn-primary">Back to Homepage</a>
+        <a href="/contact/" class="btn btn-outline">Contact Us</a>
+      </div>
+
+      <nav class="error-links" aria-label="Helpful links">
+        <a href="/services/">Our Services</a>
+        <a href="/about/">About Us</a>
+        <a href="/blog/">Blog</a>
+        <a href="/services/local-seo/">Local SEO</a>
+        <a href="/services/business-automation/">Automation</a>
+      </nav>
+
+    </div>
+  </main>
+
+</body>
+</html>
